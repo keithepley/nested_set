@@ -78,7 +78,7 @@ module CollectiveIdea #:nodoc:
               attr_accessor :skip_before_destroy
 
               # no bulk assignment
-              if responds_to(:accessible_attributes) && accessible_attributes.blank?
+              if respond_to?(:accessible_attributes) && accessible_attributes.blank?
                 attr_protected  left_column_name.intern, right_column_name.intern
               end
 
