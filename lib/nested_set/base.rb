@@ -249,7 +249,7 @@ module CollectiveIdea #:nodoc:
 
           def each_with_level(objects = nil)
             levels = []
-            (objects || scoped).each do |i|
+            (objects || all).each do |i|
               if level = levels.index(i.parent_id)
                 levels.slice!((level + 1)..-1)
               else
